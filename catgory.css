@@ -1,0 +1,341 @@
+
+/* ==============================
+   GYM STRIKE - CATEGORY PAGE
+   Black / Grey / Red Theme
+   ============================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #15191c;
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    background-color: #101214;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 3px solid #c62828;
+}
+
+/* LOGO */
+header h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header h1::first-letter {
+    color: #e53935;
+}
+
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #e53935;
+    border-bottom-color: #e53935;
+}
+
+/* ACTIVE CATEGORY LINK */
+nav a.active {
+    color: #e53935;
+    border-bottom-color: #e53935;
+}
+
+/* LOGIN BUTTON */
+nav a.login-btn {
+    background-color: #c62828;
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid #c62828;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+nav a.login-btn:hover {
+    background-color: transparent;
+    color: #ff4545;
+    border-color: #e53935;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   INTRODUCTION
+   ============================== */
+
+.intro {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.intro h2 {
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.intro h2 span {
+    color: #e53935;
+}
+
+.intro p {
+    color: #bbbbbb;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   CATEGORY GRID
+   ============================== */
+
+.categories {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* ==============================
+   CATEGORY CARDS
+   ============================== */
+
+.category-card {
+    background-color: #202529;
+    border: 1px solid #383e42;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* CARD HOVER */
+.category-card:hover {
+    transform: translateY(-7px);
+    border-color: #c62828;
+    box-shadow: 0 12px 30px rgba(198, 40, 40, 0.18);
+}
+
+/* CATEGORY IMAGE */
+.category-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* IMAGE HOVER */
+.category-card:hover img {
+    transform: scale(1.04);
+}
+
+/* IMAGE CONTAINER CLIPPING */
+.category-card {
+    isolation: isolate;
+}
+
+.category-card img {
+    position: relative;
+    z-index: -1;
+}
+
+/* CARD CONTENT */
+.card-content {
+    padding: 25px;
+}
+
+/* CARD TITLE */
+.card-content h3 {
+    color: #e53935;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* CARD DESCRIPTION */
+.card-content p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* ==============================
+   JOIN NOW BUTTON
+   ============================== */
+
+.category-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #c62828;
+    color: white;
+    border: 2px solid #c62828;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: transparent;
+    color: #ff4545;
+    border-color: #e53935;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: #101214;
+    border-top: 3px solid #c62828;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+footer p {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* ==============================
+   TABLETS
+   ============================== */
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .categories {
+        gap: 20px;
+    }
+
+    .category-card img {
+        height: 220px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+}
+
+/* ==============================
+   MOBILE PHONES
+   ============================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    nav a.login-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+
+    .intro {
+        padding: 40px 18px 30px;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .categories {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .category-card img {
+        height: 230px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 21px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+}

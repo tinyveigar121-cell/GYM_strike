@@ -1,0 +1,220 @@
+
+/* ==============================
+   GYM STRIKE - LOGIN PAGE
+   Theme: Black, Grey and Red
+   ============================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #15191c;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    background-color: #101214;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 3px solid #c62828;
+}
+
+/* LOGO */
+header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header h1::first-letter {
+    color: #e53935;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #e53935;
+    border-bottom-color: #e53935;
+}
+
+/* ==============================
+   LOGIN FORM
+   ============================== */
+
+form {
+    width: 90%;
+    max-width: 430px;
+    margin: 65px auto;
+    padding: 40px 35px;
+    background-color: #202529;
+    border: 1px solid #383e42;
+    border-top: 5px solid #c62828;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+/* FORM HOVER */
+form:hover {
+    box-shadow: 0 12px 35px rgba(198, 40, 40, 0.15);
+}
+
+/* INPUT GROUPS */
+form div {
+    margin-bottom: 23px;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin-bottom: 9px;
+    color: #eeeeee;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* INPUT FIELDS */
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    background-color: #15191c;
+    color: white;
+    border: 1px solid #444a4e;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+/* INPUT FOCUS */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 10px rgba(229, 57, 53, 0.25);
+}
+
+/* LOGIN BUTTON */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    background-color: #c62828;
+    color: white;
+    border: 2px solid #c62828;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* LOGIN BUTTON HOVER */
+input[type="submit"]:hover {
+    background-color: transparent;
+    color: #ff4545;
+    border-color: #e53935;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(198, 40, 40, 0.25);
+}
+
+/* BUTTON CLICK */
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    form {
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px;
+    }
+
+    form {
+        width: 95%;
+        padding: 28px 20px;
+        margin: 30px auto;
+    }
+
+    label {
+        font-size: 12px;
+    }
+}
+

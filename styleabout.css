@@ -1,0 +1,163 @@
+
+/* ==========================
+   FITZONE GYM - ABOUT PAGE
+   Black, Red & White Theme
+   ========================== */
+
+/* 1. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+/* 3. Page title */
+h1 {
+    text-align: center;
+    color: #ff3030;
+    font-size: 42px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 35px 15px;
+    background: #111111;
+    border-bottom: 2px solid #ff3030;
+}
+
+/* 4. Navigation header */
+header {
+    background: #171717;
+    border-bottom: 1px solid #333333;
+    padding: 0 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* 5. Navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 6. Navigation links */
+nav a {
+    display: inline-block;
+    color: #eeeeee;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 22px;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+/* 7. Navigation hover effect */
+nav a:hover {
+    color: #ff3030;
+    background: #222222;
+    border-bottom: 3px solid #ff3030;
+}
+
+/* 8. Highlight the About link */
+nav a[href="about.html"] {
+    color: #ff3030;
+    border-bottom: 3px solid #ff3030;
+}
+
+/* 9. About information paragraph */
+body > p {
+    max-width: 1150px;
+    margin: 55px auto;
+    padding: 40px 45px;
+    background: linear-gradient(145deg, #1a1a1a, #111111);
+    color: #d6d6d6;
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+    border: 1px solid #303030;
+    border-left: 5px solid #ff3030;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+/* 10. Card hover effect */
+body > p:hover {
+    border-color: #ff3030;
+    box-shadow: 0 12px 35px rgba(255, 48, 48, 0.12);
+}
+
+/* 11. Important text */
+p strong {
+    color: #ff3030;
+    font-weight: 800;
+}
+
+/* 12. Text selection */
+::selection {
+    background: #ff3030;
+    color: #ffffff;
+}
+
+/* 13. Tablet screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        padding: 28px 12px;
+    }
+
+    header {
+        padding: 0 3%;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 15px 12px;
+        font-size: 12px;
+    }
+
+    body > p {
+        margin: 30px 20px;
+        padding: 25px;
+        font-size: 15px;
+        text-align: left;
+    }
+}
+
+/* 14. Mobile screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    body > p {
+        margin: 22px 12px;
+        padding: 20px 16px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}

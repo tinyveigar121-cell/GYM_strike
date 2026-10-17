@@ -1,0 +1,281 @@
+
+/* ==============================
+   GYM STRIKE - SUPPORT PAGE
+   Black / Grey / Red Theme
+   ============================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #15191c;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* ==============================
+   NAVIGATION BAR
+   ============================== */
+
+nav {
+    background-color: #101214;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 3px solid #c62828;
+}
+
+/* NAV LINKS */
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+/* NAV HOVER */
+nav a:hover {
+    color: #e53935;
+    border-bottom-color: #e53935;
+}
+
+/* SPECIAL LOGIN BUTTON */
+nav a.login-btn {
+    background-color: #c62828;
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid #c62828;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+/* LOGIN HOVER */
+nav a.login-btn:hover {
+    background-color: transparent;
+    color: #ff4545;
+    border-color: #e53935;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   CONTACT SECTION
+   ============================== */
+
+#contact {
+    max-width: 700px;
+    margin: 50px auto 35px;
+    padding: 35px;
+    background-color: #202529;
+    border: 1px solid #383e42;
+    border-top: 5px solid #c62828;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* CONTACT TITLE */
+#contact h2 {
+    color: #e53935;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* CONTACT INFORMATION */
+#contact p {
+    background-color: #15191c;
+    color: #dddddd;
+    padding: 15px 18px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c62828;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+    transition: 0.3s ease;
+}
+
+/* CONTACT HOVER */
+#contact p:hover {
+    background-color: #292e32;
+    border-left-color: #ff4545;
+}
+
+/* ==============================
+   TICKET LABEL
+   ============================== */
+
+body > label {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ==============================
+   TICKET TEXTAREA
+   ============================== */
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    min-height: 180px;
+    margin: 0 auto;
+    padding: 18px;
+    background-color: #202529;
+    color: white;
+    border: 1px solid #444a4e;
+    border-left: 4px solid #c62828;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* TEXTAREA FOCUS */
+textarea:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 10px rgba(229, 57, 53, 0.2);
+}
+
+/* ==============================
+   SEND TICKET BUTTON
+   ============================== */
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #c62828;
+    color: white;
+    border: 2px solid #c62828;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background-color: transparent;
+    color: #ff4545;
+    border-color: #e53935;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(198, 40, 40, 0.25);
+}
+
+/* BUTTON CLICK */
+button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 3%;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    #contact {
+        margin: 35px 20px 25px;
+        padding: 25px;
+    }
+
+    body > label {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    textarea,
+    button {
+        width: calc(100% - 40px);
+    }
+
+    #contact h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    nav a.login-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+
+    #contact {
+        margin: 25px 15px;
+        padding: 22px 17px;
+    }
+
+    #contact h2 {
+        font-size: 23px;
+    }
+
+    #contact p {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    body > label {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+
+    textarea,
+    button {
+        width: calc(100% - 30px);
+    }
+
+    textarea {
+        min-height: 150px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
